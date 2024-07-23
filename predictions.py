@@ -72,7 +72,7 @@ def get_cosine_distance(a, b):
     return (1 - F.cosine_similarity(a, b)).numpy()
 
 
-MODEL_PATH = 'C:/Users/Dell/Desktop/You-Only-Speak-Once/fbank_net/weights/triplet_loss_trained_model.pth'
+MODEL_PATH = './triplet_loss_trained_model.pth'
 model_instance = FBankCrossEntropyNet()
 model_instance.load_state_dict(torch.load(MODEL_PATH, map_location=lambda storage, loc: storage))
 model_instance = model_instance.double()
